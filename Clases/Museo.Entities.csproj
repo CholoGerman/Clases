@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="CommonEntities">
+      <HintPath>..\Resources\AssemblyReferences\CommonEntities.dll</HintPath>
+    </Reference>
+    <Reference Include="FileAccess">
+      <HintPath>..\Resources\AssemblyReferences\FileAccess.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

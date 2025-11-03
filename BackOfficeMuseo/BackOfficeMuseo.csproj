@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{831106A3-D302-47CA-984F-FB2B94623241}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BackOfficeMuseo</RootNamespace>
+    <AssemblyName>BackOfficeMuseo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonEntities">
+      <HintPath>..\Resources\AssemblyReferences\CommonEntities.dll</HintPath>
+    </Reference>
+    <Reference Include="FileAccess">
+      <HintPath>..\Resources\AssemblyReferences\FileAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Autores\FrmAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autores\FrmAutor.Designer.cs">
+      <DependentUpon>FrmAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CajaTexto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CajaTexto.Designer.cs">
+      <DependentUpon>CajaTexto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\TextBoxValidationHelper.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Obras\AltaObra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obras\AltaObra.Designer.cs">
+      <DependentUpon>AltaObra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procedencia\CompraObra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procedencia\CompraObra.Designer.cs">
+      <DependentUpon>CompraObra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procedencia\DonacionObra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procedencia\DonacionObra.Designer.cs">
+      <DependentUpon>DonacionObra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procedencia\PrestamoObra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procedencia\PrestamoObra.Designer.cs">
+      <DependentUpon>PrestamoObra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Autores\FrmAutor.resx">
+      <DependentUpon>FrmAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CajaTexto.resx">
+      <DependentUpon>CajaTexto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obras\AltaObra.resx">
+      <DependentUpon>AltaObra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procedencia\CompraObra.resx">
+      <DependentUpon>CompraObra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procedencia\DonacionObra.resx">
+      <DependentUpon>DonacionObra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procedencia\PrestamoObra.resx">
+      <DependentUpon>PrestamoObra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Obras\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Clases\Museo.Entities.csproj">
+      <Project>{af800f0f-5a37-4b3b-9832-3a0d68859b31}</Project>
+      <Name>Museo.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

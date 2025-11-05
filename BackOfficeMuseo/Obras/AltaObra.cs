@@ -71,7 +71,7 @@ namespace BackOfficeMuseo.Obras
             {
 
                 case ProcedenciaObra.Compra:
-                    CompraObra frmCompra = new CompraObra();
+                    FrmCompraObra frmCompra = new FrmCompraObra();
                     DialogResult resultCompra = frmCompra.ShowDialog();
                     if(resultCompra == DialogResult.OK)
                     {
@@ -80,7 +80,7 @@ namespace BackOfficeMuseo.Obras
                     }
                     break;
                 case ProcedenciaObra.Donacion:
-                    DonacionObra frmDonacion = new DonacionObra();
+                    FrmDonacion frmDonacion = new FrmDonacion();
                     DialogResult resultDonacion = frmDonacion.ShowDialog();
                     if (resultDonacion == DialogResult.OK)
                     {
@@ -89,7 +89,7 @@ namespace BackOfficeMuseo.Obras
                     }
                     break;
                 case ProcedenciaObra.Prestamo:
-                    PrestamoObra frmPrestamo = new PrestamoObra();
+                    FrmPrestamo frmPrestamo = new FrmPrestamo();
                     DialogResult resultPrestamo = frmPrestamo.ShowDialog();
                     if (resultPrestamo == DialogResult.OK)
                     {

@@ -1,6 +1,6 @@
 ﻿namespace BackOfficeMuseo.Procedencia
 {
-    partial class PrestamoObra
+    partial class FrmPrestamo
     {
         /// <summary>
         /// Required designer variable.

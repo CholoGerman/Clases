@@ -65,6 +65,12 @@
     <Compile Include="Controls\CajaTexto.Designer.cs">
       <DependentUpon>CajaTexto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Donantes\FrmDonante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donantes\FrmDonante.Designer.cs">
+      <DependentUpon>FrmDonante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\TextBoxValidationHelper.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -78,23 +84,23 @@
     <Compile Include="Obras\AltaObra.Designer.cs">
       <DependentUpon>AltaObra.cs</DependentUpon>
     </Compile>
-    <Compile Include="Procedencia\CompraObra.cs">
+    <Compile Include="Procedencia\FrmCompraObra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Procedencia\CompraObra.Designer.cs">
-      <DependentUpon>CompraObra.cs</DependentUpon>
+    <Compile Include="Procedencia\FrmCompraObra.Designer.cs">
+      <DependentUpon>FrmCompraObra.cs</DependentUpon>
     </Compile>
-    <Compile Include="Procedencia\DonacionObra.cs">
+    <Compile Include="Procedencia\FrmDonacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Procedencia\DonacionObra.Designer.cs">
-      <DependentUpon>DonacionObra.cs</DependentUpon>
+    <Compile Include="Procedencia\FrmDonacion.Designer.cs">
+      <DependentUpon>FrmDonacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Procedencia\PrestamoObra.cs">
+    <Compile Include="Procedencia\FrmPrestamo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Procedencia\PrestamoObra.Designer.cs">
-      <DependentUpon>PrestamoObra.cs</DependentUpon>
+    <Compile Include="Procedencia\FrmPrestamo.Designer.cs">
+      <DependentUpon>FrmPrestamo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,20 +110,23 @@
     <EmbeddedResource Include="Controls\CajaTexto.resx">
       <DependentUpon>CajaTexto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Donantes\FrmDonante.resx">
+      <DependentUpon>FrmDonante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Obras\AltaObra.resx">
       <DependentUpon>AltaObra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Procedencia\CompraObra.resx">
-      <DependentUpon>CompraObra.cs</DependentUpon>
+    <EmbeddedResource Include="Procedencia\FrmCompraObra.resx">
+      <DependentUpon>FrmCompraObra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Procedencia\DonacionObra.resx">
-      <DependentUpon>DonacionObra.cs</DependentUpon>
+    <EmbeddedResource Include="Procedencia\FrmDonacion.resx">
+      <DependentUpon>FrmDonacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Procedencia\PrestamoObra.resx">
-      <DependentUpon>PrestamoObra.cs</DependentUpon>
+    <EmbeddedResource Include="Procedencia\FrmPrestamo.resx">
+      <DependentUpon>FrmPrestamo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

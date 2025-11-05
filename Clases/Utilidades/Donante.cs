@@ -16,5 +16,9 @@ namespace Museo.Entities.Utilidades
         public string Email { get; set; }
         public string NumeroDocumento { get; set; }
         public IEnumerable<Donacion> Donaciones { get; set; }
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }

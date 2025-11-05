@@ -19,6 +19,10 @@ namespace Clases.Personas
             }
 
         }
+        public override string ToString()
+        {
+            return NombreCompleto;
+        }
 
 
     }

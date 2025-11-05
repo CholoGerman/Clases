@@ -1,13 +1,23 @@
-﻿using Museo.Entities.Filtros;
+﻿using CommonEntities.Interfaces;
+using FileAccess;
+using Museo.Entities.Filtros;
+using Museo.Entities.Personas;
 using Museo.Entities.Utilidades;
+using System.Configuration;
 
 namespace MuseoBusinessLogic
 {
     public class ManejadorDonantes : Donante
     {
+        IGenericFileManager<Donante> jsonManager = new GenericJasonManager<Donante>();
+        string filename = ConfigurationManager.AppSettings["ArchivoDonantes"];
         public void AgregarDonante(Donante donante)
         {
-            throw new NotImplementedException();
+            var donantes = jsonManager.Leer(filename);
+            donantes.Add(donante);
+            jsonManager.Guardar(filename, donantes);
+           
+
         }
         public IEnumerable<Donante> BuscarDonantes(FiltroDonante filtro)
         {
@@ -24,7 +34,8 @@ namespace MuseoBusinessLogic
         }
         public IEnumerable<Donante> ListarDonantes()
         {
-            throw new NotImplementedException();
+            var donantes = jsonManager.Leer(filename);
+            return donantes;
         }
         public void ModificarDonante(Donante donante)
         {

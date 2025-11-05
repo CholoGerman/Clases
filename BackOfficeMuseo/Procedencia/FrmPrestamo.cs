@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BackOfficeMuseo.Procedencia
 {
-    public partial class DonacionObra : Form
+    public partial class FrmPrestamo : Form
     {
-        public DonacionObra()
+        public FrmPrestamo()
         {
             InitializeComponent();
         }

@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace BackOfficeMuseo.Procedencia
 {
-    public partial class CompraObra : Form
+    public partial class FrmCompraObra : Form
     {
 
-        public CompraObra()
+        public FrmCompraObra()
         {
             cboMoneda.SelectedIndex = 0;
             InitializeComponent();

@@ -2,6 +2,7 @@
 using Clases.Personas;
 using CommonEntities.Interfaces;
 using FileAccess;
+using Museo.Entities.Personas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,8 @@ namespace BackOfficeMuseo.Autores
     {
         public IEnumerable<Autor> AutoresSeleccionados { get; private set; }
         private IEnumerable<Autor> _autores;
+        IGenericFileManager<Autor> jsonManager = new GenericJasonManager<Autor>();
+        string filename = ConfigurationManager.AppSettings["ArchivoAutores"];
         public FrmAutor()
         {
             InitializeComponent();
@@ -29,8 +32,7 @@ namespace BackOfficeMuseo.Autores
             .Select(row => row.DataBoundItem as Autor);
 
             _autores = dgvAutores.DataSource as IEnumerable<Autor>;
-            IGenericFileManager<Autor> jsonManager = new GenericJasonManager<Autor>();
-            var fileName = ConfigurationManager.AppSettings["ArchivosAutores"];
+            jsonManager.Guardar(filename, _autores.ToList());
 
 
             DialogResult = DialogResult.OK;
@@ -40,9 +42,7 @@ namespace BackOfficeMuseo.Autores
 
         private void FrmAutor_Load(object sender, EventArgs e)
         {
-            IGenericFileManager<Autor> jsonManager = new GenericJasonManager<Autor>();
-
-            var fileName = ConfigurationManager.AppSettings["ArchivosAutores"];
+        
 
 
             List<Autor> autores = new List<Autor>();
@@ -50,12 +50,10 @@ namespace BackOfficeMuseo.Autores
                 new Autor { Id = 1, Nombre = "Pablo", Apellido = "Picasso", Biografia = "Pintor y escultor español" };
              };
 
-            jsonManager.Guardar(fileName, autores);
-            _autores = jsonManager.Leer(fileName);
+            jsonManager.Guardar(filename, autores);
+            _autores = jsonManager.Leer(filename);
             BindingList<Autor> listaAutores = new BindingList<Autor>(_autores.ToList());
-
             dgvAutores.DataSource = listaAutores;
-
         }
 
 

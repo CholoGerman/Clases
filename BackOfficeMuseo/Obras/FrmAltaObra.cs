@@ -2,20 +2,23 @@
 using BackOfficeMuseo.Helpers;
 using BackOfficeMuseo.Procedencia;
 using Clases.Obras;
+using Clases.Personas;
 using Clases.Procedencias;
+using Museo.Entities.Personas;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace BackOfficeMuseo.Obras
 {
-    public partial class AltaObra : Form
+    public partial class FrmAltaObra : Form
     {
         private int contadorErrores = 0;
         private Obra obra;
         private Donacion donacion;
         private Prestamo prestamo;
      
-        public AltaObra()
+        public FrmAltaObra()
         {
             prestamo = new Prestamo();
             donacion = new Donacion();
@@ -35,8 +38,28 @@ namespace BackOfficeMuseo.Obras
                 MessageBox.Show("Por favor, corrija los errores en el formulario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            LeerDatosDeLaObra();
+            MessageBox.Show("Obra registrada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+
+        private void LeerDatosDeLaObra()
+        {
+            obra.Titulo = txtTitulo.Text;
+            obra.Epoca = (EpocaArte)cboEpoca.SelectedIndex;
+          List<Autor> autores = new List<Autor>();
+            for(int i =0; i < clbAutores.Items.Count; i++)
+            {
+                autores.Add((Autor)clbAutores.Items[i]);
+            }
+            obra.Autores = autores;
+            obra.FechaCreacion = dtpFechaCreacion.Value;
+            obra.FechaPublicacion = dtpFechaPublicacion.Value;
+            obra.Descripcion = txtDescripcion.Text;
+            obra.Epoca = (EpocaArte)cboEpoca.SelectedIndex;
+            obra.EsCopia = chkEsCopia.Checked;
+        }
+        
 
         private void btnSeleccionarAutor_Click(object sender, EventArgs e)
         {
@@ -55,6 +78,30 @@ namespace BackOfficeMuseo.Obras
         private bool IsValidForm()
         {
        
+                if(clbAutores.Items.Count == 0)
+                {
+                ControlValidationHelper.MarcarControlComoInvalido(clbAutores);
+                contadorErrores++;
+                }
+                else
+            {
+                ControlValidationHelper.MarcarControlComoValido(clbAutores);
+              
+            }
+                if(cboEpoca.SelectedIndex < 0)
+            {
+                ControlValidationHelper.MarcarControlComoInvalido(cboProcedencia);
+                contadorErrores++;
+            }
+            else
+            {
+                ControlValidationHelper.MarcarControlComoValido(cboProcedencia);
+             
+            }
+                if(!TextBoxValidationHelper.InputIsValid(txtTitulo, lblErrorTitulo))
+            
+                contadorErrores++;
+          
                 return contadorErrores == 0;
 
         }

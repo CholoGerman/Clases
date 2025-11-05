@@ -1,4 +1,5 @@
-﻿using Clases.Personas;
+﻿using BackOfficeMuseo.Helpers;
+using Clases.Personas;
 using Museo.Entities.Utilidades;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,35 @@ namespace BackOfficeMuseo.Procedencia
         }
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+            if (ValidarDatos())
+            {
+                CompletarDatosDonacion();
+                DialogResult = DialogResult.OK;
+                this.Close();
+
+
+            }
+            else {
+                
+                MessageBox.Show("Por favor, corrija los errores en el formulario.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult = DialogResult.None;
+            }
+        }
+
+        private bool ValidarDatos()
+        {
+            int fallos = 0;
+            if (cboDonante.SelectedIndex <= 0)
+            {
+                ControlValidationHelper.MarcarControlComoInvalido(cboDonante);
+                fallos++;
+            }
+            else
+            {
+                ControlValidationHelper.MarcarControlComoValido(cboDonante);
+            }
+
+            return fallos == 0; 
 
         }
         private void FrmDonacion_Load(object sender, EventArgs e)
@@ -59,5 +89,19 @@ namespace BackOfficeMuseo.Procedencia
             }
             Donacion.Donador = (Donante)cboDonante.SelectedItem;
         }
+        private void CompletarDatosDonacion()
+        {
+            Donacion = new Donacion
+            {
+                Donador = (Donante)cboDonante.SelectedItem,
+                SePuedePrestar = chkPrestar.Checked,
+                SePuedeExponer = chkExponer.Checked,
+                TiempoExposicion = chkExponer.Checked ? (short)nudMeses.Value : (short)0,
+                CondicionesEspeciales = txtCondiciones.Text,
+                OtrosDatos = txtObservaciones.Text
+            };
+
+        }
     }
+    
 }

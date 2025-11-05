@@ -71,6 +71,7 @@
     <Compile Include="Donantes\FrmDonante.Designer.cs">
       <DependentUpon>FrmDonante.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ControlValidationHelper.cs" />
     <Compile Include="Helpers\TextBoxValidationHelper.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -78,11 +79,11 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Obras\AltaObra.cs">
+    <Compile Include="Obras\FrmAltaObra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Obras\AltaObra.Designer.cs">
-      <DependentUpon>AltaObra.cs</DependentUpon>
+    <Compile Include="Obras\FrmAltaObra.Designer.cs">
+      <DependentUpon>FrmAltaObra.cs</DependentUpon>
     </Compile>
     <Compile Include="Procedencia\FrmCompraObra.cs">
       <SubType>Form</SubType>
@@ -116,8 +117,8 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Obras\AltaObra.resx">
-      <DependentUpon>AltaObra.cs</DependentUpon>
+    <EmbeddedResource Include="Obras\FrmAltaObra.resx">
+      <DependentUpon>FrmAltaObra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procedencia\FrmCompraObra.resx">
       <DependentUpon>FrmCompraObra.cs</DependentUpon>

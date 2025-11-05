@@ -32,23 +32,23 @@
             this.lblFechaDonacion = new System.Windows.Forms.Label();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.lblObservaciones = new System.Windows.Forms.Label();
-            this.cbExponer = new System.Windows.Forms.CheckBox();
-            this.cbPrestar = new System.Windows.Forms.CheckBox();
+            this.chkExponer = new System.Windows.Forms.CheckBox();
+            this.chkPrestar = new System.Windows.Forms.CheckBox();
             this.cbVender = new System.Windows.Forms.CheckBox();
             this.lblCondiciones = new System.Windows.Forms.Label();
             this.txtCondiciones = new System.Windows.Forms.TextBox();
             this.cboDonante = new System.Windows.Forms.ComboBox();
             this.lblDonante = new System.Windows.Forms.Label();
             this.lblExposicion = new System.Windows.Forms.Label();
-            this.nudExposicion = new System.Windows.Forms.NumericUpDown();
+            this.nudMeses = new System.Windows.Forms.NumericUpDown();
             this.btnConfirmar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.nudExposicion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMeses)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpFechaDonacion
             // 
             this.dtpFechaDonacion.Location = new System.Drawing.Point(220, 59);
-            this.dtpFechaDonacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaDonacion.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaDonacion.MaxDate = new System.DateTime(2025, 10, 29, 0, 0, 0, 0);
             this.dtpFechaDonacion.Name = "dtpFechaDonacion";
             this.dtpFechaDonacion.Size = new System.Drawing.Size(404, 22);
@@ -68,7 +68,7 @@
             // txtObservaciones
             // 
             this.txtObservaciones.Location = new System.Drawing.Point(220, 438);
-            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(4);
             this.txtObservaciones.MaxLength = 500;
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
@@ -85,33 +85,33 @@
             this.lblObservaciones.TabIndex = 8;
             this.lblObservaciones.Text = "Observaciones:";
             // 
-            // cbExponer
+            // chkExponer
             // 
-            this.cbExponer.AutoSize = true;
-            this.cbExponer.Location = new System.Drawing.Point(367, 128);
-            this.cbExponer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cbExponer.Name = "cbExponer";
-            this.cbExponer.Size = new System.Drawing.Size(101, 20);
-            this.cbExponer.TabIndex = 10;
-            this.cbExponer.Text = "Se expone?";
-            this.cbExponer.UseVisualStyleBackColor = true;
+            this.chkExponer.AutoSize = true;
+            this.chkExponer.Location = new System.Drawing.Point(462, 259);
+            this.chkExponer.Margin = new System.Windows.Forms.Padding(4);
+            this.chkExponer.Name = "chkExponer";
+            this.chkExponer.Size = new System.Drawing.Size(101, 20);
+            this.chkExponer.TabIndex = 10;
+            this.chkExponer.Text = "Se expone?";
+            this.chkExponer.UseVisualStyleBackColor = true;
             // 
-            // cbPrestar
+            // chkPrestar
             // 
-            this.cbPrestar.AutoSize = true;
-            this.cbPrestar.Location = new System.Drawing.Point(220, 128);
-            this.cbPrestar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cbPrestar.Name = "cbPrestar";
-            this.cbPrestar.Size = new System.Drawing.Size(94, 20);
-            this.cbPrestar.TabIndex = 11;
-            this.cbPrestar.Text = "Se presta?";
-            this.cbPrestar.UseVisualStyleBackColor = true;
+            this.chkPrestar.AutoSize = true;
+            this.chkPrestar.Location = new System.Drawing.Point(220, 128);
+            this.chkPrestar.Margin = new System.Windows.Forms.Padding(4);
+            this.chkPrestar.Name = "chkPrestar";
+            this.chkPrestar.Size = new System.Drawing.Size(94, 20);
+            this.chkPrestar.TabIndex = 11;
+            this.chkPrestar.Text = "Se presta?";
+            this.chkPrestar.UseVisualStyleBackColor = true;
             // 
             // cbVender
             // 
             this.cbVender.AutoSize = true;
-            this.cbVender.Location = new System.Drawing.Point(521, 128);
-            this.cbVender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbVender.Location = new System.Drawing.Point(388, 128);
+            this.cbVender.Margin = new System.Windows.Forms.Padding(4);
             this.cbVender.Name = "cbVender";
             this.cbVender.Size = new System.Drawing.Size(94, 20);
             this.cbVender.TabIndex = 12;
@@ -131,7 +131,7 @@
             // txtCondiciones
             // 
             this.txtCondiciones.Location = new System.Drawing.Point(220, 330);
-            this.txtCondiciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCondiciones.Margin = new System.Windows.Forms.Padding(4);
             this.txtCondiciones.MaxLength = 500;
             this.txtCondiciones.Multiline = true;
             this.txtCondiciones.Name = "txtCondiciones";
@@ -142,7 +142,7 @@
             // 
             this.cboDonante.FormattingEnabled = true;
             this.cboDonante.Location = new System.Drawing.Point(220, 187);
-            this.cboDonante.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboDonante.Margin = new System.Windows.Forms.Padding(4);
             this.cboDonante.Name = "cboDonante";
             this.cboDonante.Size = new System.Drawing.Size(160, 24);
             this.cboDonante.TabIndex = 16;
@@ -168,18 +168,18 @@
             this.lblExposicion.TabIndex = 18;
             this.lblExposicion.Text = "Tiempo exposición:";
             // 
-            // nudExposicion
+            // nudMeses
             // 
-            this.nudExposicion.Location = new System.Drawing.Point(232, 257);
-            this.nudExposicion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.nudExposicion.Name = "nudExposicion";
-            this.nudExposicion.Size = new System.Drawing.Size(160, 22);
-            this.nudExposicion.TabIndex = 19;
+            this.nudMeses.Location = new System.Drawing.Point(232, 257);
+            this.nudMeses.Margin = new System.Windows.Forms.Padding(4);
+            this.nudMeses.Name = "nudMeses";
+            this.nudMeses.Size = new System.Drawing.Size(160, 22);
+            this.nudMeses.TabIndex = 19;
             // 
             // btnConfirmar
             // 
             this.btnConfirmar.Location = new System.Drawing.Point(521, 562);
-            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(100, 28);
             this.btnConfirmar.TabIndex = 20;
@@ -192,24 +192,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 631);
             this.Controls.Add(this.btnConfirmar);
-            this.Controls.Add(this.nudExposicion);
+            this.Controls.Add(this.nudMeses);
             this.Controls.Add(this.lblExposicion);
             this.Controls.Add(this.lblDonante);
             this.Controls.Add(this.cboDonante);
             this.Controls.Add(this.txtCondiciones);
             this.Controls.Add(this.lblCondiciones);
             this.Controls.Add(this.cbVender);
-            this.Controls.Add(this.cbPrestar);
-            this.Controls.Add(this.cbExponer);
+            this.Controls.Add(this.chkPrestar);
+            this.Controls.Add(this.chkExponer);
             this.Controls.Add(this.txtObservaciones);
             this.Controls.Add(this.lblObservaciones);
             this.Controls.Add(this.dtpFechaDonacion);
             this.Controls.Add(this.lblFechaDonacion);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmDonacion";
             this.Text = "DonacionObra";
             this.Load += new System.EventHandler(this.FrmDonacion_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.nudExposicion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMeses)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,15 +221,15 @@
         private System.Windows.Forms.Label lblFechaDonacion;
         private System.Windows.Forms.TextBox txtObservaciones;
         private System.Windows.Forms.Label lblObservaciones;
-        private System.Windows.Forms.CheckBox cbExponer;
-        private System.Windows.Forms.CheckBox cbPrestar;
+        private System.Windows.Forms.CheckBox chkExponer;
+        private System.Windows.Forms.CheckBox chkPrestar;
         private System.Windows.Forms.CheckBox cbVender;
         private System.Windows.Forms.Label lblCondiciones;
         private System.Windows.Forms.TextBox txtCondiciones;
         private System.Windows.Forms.ComboBox cboDonante;
         private System.Windows.Forms.Label lblDonante;
         private System.Windows.Forms.Label lblExposicion;
-        private System.Windows.Forms.NumericUpDown nudExposicion;
+        private System.Windows.Forms.NumericUpDown nudMeses;
         private System.Windows.Forms.Button btnConfirmar;
     }
 }

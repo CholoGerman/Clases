@@ -10,6 +10,6 @@ namespace Clases.Personas
     public class Tecnico : Persona
     {
         public string Especialidad { get; set; } // conservación pintura, etc.
-        public List<Restauracion> Restauraciones { get; set; } = new();
+        public List<Restauracion> Restauraciones { get; set; } 
     }
 }

@@ -5,7 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace MuseoInterfaces
+namespace Museo.Interfaces
 {
     public interface IAutores
     {

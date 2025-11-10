@@ -59,4 +59,12 @@ namespace Clases.Obras
         Donacion,
         Prestamo
     }
+
+    public enum TipoAuditoria
+    {
+        Movimiento,
+        Prestamo,
+        Restauracion,
+        Otro
+    }
 }

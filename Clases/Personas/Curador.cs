@@ -10,6 +10,6 @@ namespace Clases.Personas
     public class Curador : Persona
     {
         public string Departamento { get; set; }
-        public List<Exposicion> ExposicionesCuradas { get; set; } = new();
+        public List<Exposicion> ExposicionesCuradas { get; set; } 
     }
 }

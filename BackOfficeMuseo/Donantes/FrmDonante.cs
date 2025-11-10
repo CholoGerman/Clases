@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Museo.Interfaces;
+using MuseoBusinessLogic;
 
 namespace BackOfficeMuseo.Donantes
 {
@@ -36,7 +38,7 @@ namespace BackOfficeMuseo.Donantes
                 Domicilio = txtDomicilio.Text,
                 NumeroDocumento = txtCI.Text
             };
-            ManejadorDonantes.AgergarDonante(donante);
+            ManejadorDonantes.AgregarDonante(donante);
             DonanteSeleccionado = donante;
             DialogResult = DialogResult.OK;
             this.Close();

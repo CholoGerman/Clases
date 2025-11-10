@@ -7,15 +7,15 @@ using System.Text;
 
 namespace Museo.Interfaces
 {
-    internal interface IDonantes
+    public interface IDonantes
     {
         /// <summary>
         ///  El objetivo de este método es dar de alta un dnane en tu sistema.
         /// </summary>
         /// <param name="donante">Instancia de la clase donante que deseo agregar.</param>
-        void AgergarDonante(Donante donante);
+        void AgregarDonante(Donante donante);
         void ModificarDonante(Donante donante);
-        Donacion ElimiarDonante(int idDonante);
+        Donacion EliminarDonante(int idDonante);
         Donacion CargarDonante(int idDonante);
         IEnumerable<Donacion> ListarDonantes();
         IEnumerable<Donacion> BuscarDonantes(FiltroDonante filtro);

@@ -1,6 +1,9 @@
-﻿using BackOfficeMuseo.Helpers;
+﻿using BackOfficeMuseo.Donantes;
+using BackOfficeMuseo.Helpers;
 using Clases.Personas;
 using Museo.Entities.Utilidades;
+using Museo.Interfaces;
+using MuseoBusinessLogic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -87,13 +90,13 @@ namespace BackOfficeMuseo.Procedencia
                     cboDonante.SelectedItem = frmDonante.DonanteSeleccionado;
                 }
             }
-            Donacion.Donador = (Donante)cboDonante.SelectedItem;
+            Donacion.Donante = (Donante)cboDonante.SelectedItem;
         }
         private void CompletarDatosDonacion()
         {
-            Donacion = new Donacion
+            FrmDonacion = new Donacion
             {
-                Donador = (Donante)cboDonante.SelectedItem,
+                Donante = (Donante)cboDonante.SelectedItem,
                 SePuedePrestar = chkPrestar.Checked,
                 SePuedeExponer = chkExponer.Checked,
                 TiempoExposicion = chkExponer.Checked ? (short)nudMeses.Value : (short)0,

@@ -156,6 +156,14 @@
       <Project>{af800f0f-5a37-4b3b-9832-3a0d68859b31}</Project>
       <Name>Museo.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MuseoBusinessLogic\MuseoBusinessLogic.csproj">
+      <Project>{bdf43178-a89c-43ed-8e07-63be94f93f7e}</Project>
+      <Name>MuseoBusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MuseoInterfaces\Museo.Interfaces.csproj">
+      <Project>{f22d75f9-1c67-4c63-af33-2cccd4fd6d8b}</Project>
+      <Name>Museo.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

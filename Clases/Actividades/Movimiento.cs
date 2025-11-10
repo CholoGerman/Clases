@@ -9,10 +9,10 @@ namespace Clases.Actividades
 {
     public class Movimiento
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public Obra Obra { get; set; }
-        public string? Desde { get; set; }   // p.ej. Sala 1
-        public string? Hasta { get; set; }   // p.ej. Sala 2
+        public string Desde { get; set; }   // p.ej. Sala 1
+        public string Hasta { get; set; }   // p.ej. Sala 2
         public DateTime FechaMovimiento { get; set; }
         public string Motivo { get; set; }  // traslado para exposición, inventario...
         public string MedioTransporte { get; set; }

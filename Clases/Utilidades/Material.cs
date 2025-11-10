@@ -8,9 +8,9 @@ namespace Clases.Utilidades
 {
     public class Material
     {
-        public Guid Id { get; set; }
-        public string? Nombre { get; set; } // "Barniz de Conservación", "Pegamento X"
+        public int Id { get; set; }
+        public string Nombre { get; set; } 
         public string Composicion { get; set; }
-        public string Uso { get; set; } // en qué trabajos se emplea
+        public string Uso { get; set; } 
     }
 }

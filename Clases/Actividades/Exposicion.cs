@@ -10,15 +10,15 @@ namespace Clases.Actividades
 {
     public class Exposicion : Actividad
     {
-        public Guid Id { get; set; }
-        public string? Titulo { get; set; }
+        public int Id { get; set; }
+        public string Titulo { get; set; }
         public string Descripcion { get; set; }
-        public DateTime? FechaInicio { get; set; }
+        public DateTime FechaInicio { get; set; }
         public DateTime FechaCierre { get; set; }
-        public List<Curador> CuradoresResponsables { get; set; } = new();
+        public List<Curador> CuradoresResponsables { get; set; } 
         public decimal Presupuesto { get; set; }
 
         // Relación N:N con Obra mediante entidad puente para poder añadir metadatos por participación
-        public List<Exhibicion> Obras { get; set; } = new();
+        public List<Exhibicion> Obras { get; set; }
     }
 }

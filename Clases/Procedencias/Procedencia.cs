@@ -10,7 +10,7 @@ namespace Clases.Procedencias
 {
     public class Procedencia
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public DateTime Fecha { get; set; }
         public string OtrosDatos { get; set; }
         

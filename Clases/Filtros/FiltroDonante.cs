@@ -8,6 +8,5 @@ namespace Museo.Entities.Filtros
     {
         public string Nombre { get; set; }
         public string Domicilio { get; set; }
-        public 
     }
 }

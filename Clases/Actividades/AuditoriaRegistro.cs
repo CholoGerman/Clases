@@ -1,4 +1,5 @@
-﻿using Clases.Personas;
+﻿using Clases.Obras;
+using Clases.Personas;
 using Clases.Procedencias;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace Clases.Actividades
 {
     public class AuditoriaRegistro
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public TipoAuditoria Tipo { get; set; }
         public DateTime Fecha { get; set; }
         public Persona QuienAutorizo { get; set; } // quién autorizó la acción
@@ -20,13 +21,7 @@ namespace Clases.Actividades
         public Prestamo PrestamoDetalles { get; set; } // opcional (si se audita un préstamo)
         public Restauracion RestauracionDetalles { get; set; } // opcional
 
-        public enum TipoAuditoria
-        {
-            Movimiento,
-            Prestamo,
-            Restauracion,
-            Otro
-        }
+      
 
     }
 }

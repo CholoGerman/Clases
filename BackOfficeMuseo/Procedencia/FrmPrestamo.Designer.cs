@@ -35,7 +35,7 @@
             this.lblInstitucion = new System.Windows.Forms.Label();
             this.lblFechaFinalizacion = new System.Windows.Forms.Label();
             this.lblDetallesSeguro = new System.Windows.Forms.Label();
-            this.cbSeguro = new System.Windows.Forms.CheckBox();
+            this.chkSeguro = new System.Windows.Forms.CheckBox();
             this.lblFechaPrestamo = new System.Windows.Forms.Label();
             this.dtpFechaPrestamo = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaFinalizacion = new System.Windows.Forms.DateTimePicker();
@@ -107,15 +107,15 @@
             this.lblDetallesSeguro.TabIndex = 27;
             this.lblDetallesSeguro.Text = "Detalles seguro:";
             // 
-            // cbSeguro
+            // chkSeguro
             // 
-            this.cbSeguro.AutoSize = true;
-            this.cbSeguro.Location = new System.Drawing.Point(667, 151);
-            this.cbSeguro.Name = "cbSeguro";
-            this.cbSeguro.Size = new System.Drawing.Size(94, 17);
-            this.cbSeguro.TabIndex = 28;
-            this.cbSeguro.Text = "Tiene seguro?";
-            this.cbSeguro.UseVisualStyleBackColor = true;
+            this.chkSeguro.AutoSize = true;
+            this.chkSeguro.Location = new System.Drawing.Point(667, 151);
+            this.chkSeguro.Name = "chkSeguro";
+            this.chkSeguro.Size = new System.Drawing.Size(94, 17);
+            this.chkSeguro.TabIndex = 28;
+            this.chkSeguro.Text = "Tiene seguro?";
+            this.chkSeguro.UseVisualStyleBackColor = true;
             // 
             // lblFechaPrestamo
             // 
@@ -169,7 +169,7 @@
             this.txtDetallesSeguro.Size = new System.Drawing.Size(220, 24);
             this.txtDetallesSeguro.TabIndex = 34;
             // 
-            // PrestamoObra
+            // FrmPrestamo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -180,7 +180,7 @@
             this.Controls.Add(this.dtpFechaFinalizacion);
             this.Controls.Add(this.dtpFechaPrestamo);
             this.Controls.Add(this.lblFechaPrestamo);
-            this.Controls.Add(this.cbSeguro);
+            this.Controls.Add(this.chkSeguro);
             this.Controls.Add(this.lblDetallesSeguro);
             this.Controls.Add(this.lblFechaFinalizacion);
             this.Controls.Add(this.lblInstitucion);
@@ -188,7 +188,7 @@
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.txtObservaciones);
             this.Controls.Add(this.lblObservaciones);
-            this.Name = "PrestamoObra";
+            this.Name = "FrmPrestamo";
             this.Text = "PrestamoObra";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -204,7 +204,7 @@
         private System.Windows.Forms.Label lblInstitucion;
         private System.Windows.Forms.Label lblFechaFinalizacion;
         private System.Windows.Forms.Label lblDetallesSeguro;
-        private System.Windows.Forms.CheckBox cbSeguro;
+        private System.Windows.Forms.CheckBox chkSeguro;
         private System.Windows.Forms.Label lblFechaPrestamo;
         private System.Windows.Forms.DateTimePicker dtpFechaPrestamo;
         private System.Windows.Forms.DateTimePicker dtpFechaFinalizacion;

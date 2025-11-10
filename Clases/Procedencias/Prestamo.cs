@@ -10,8 +10,8 @@ namespace Clases.Procedencias
 {
     public class Prestamo : Procedencia
     {
-        public Institucion Operador { get; set; } // institución que recibe la obra
-        public Persona PersonaReceptora { get; set; } // alternativa
+        public Institucion Operador { get; set; } 
+        public Persona PersonaReceptora { get; set; } 
         public DateTime FechaFinalizacion { get; set; }
         public string CondicionesTransporte { get; set; } 
         public bool TieneSeguro { get; set; }
